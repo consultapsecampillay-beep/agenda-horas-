@@ -1,0 +1,3 @@
+pyyaml
+google-auth
+google-api-python-client

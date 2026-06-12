@@ -1,0 +1,64 @@
+# ============================================================
+# Configuración del sistema de disponibilidad
+# Ps. Enrique Campillay Pizarro
+# ============================================================
+
+zona_horaria: America/Santiago
+duracion_sesion_min: 60
+
+# Horizonte: desde mañana hasta el final de la próxima semana
+# (domingo de la semana siguiente)
+horizonte: semana_actual_mas_siguiente
+
+# Calendarios
+calendario_principal: consulta.ps.ecampillay@gmail.com
+calendario_feriados: es.cl#holiday@group.v.calendar.google.com
+# Calendario secundario OPCIONAL para abrir sábados u horas extra.
+# Crear un calendario nuevo llamado "Aperturas" en Google Calendar,
+# compartirlo con la cuenta de servicio (ver todos los detalles)
+# y pegar aquí su ID. Los eventos creados ahí abren bloques en línea.
+calendario_aperturas: ""
+
+# Número de WhatsApp para el botón de reserva de la página
+# (formato internacional sin +, ej: 56912345678)
+whatsapp_numero: "REEMPLAZAR"
+
+centro: "Kadia Centro Atención Familiar, La Serena (K1)"
+titulo_pagina: "Horas disponibles — Ps. Enrique Campillay"
+
+recordatorio_pago: >
+  La reserva se confirma mediante transferencia bancaria,
+  con al menos 1 día de anticipación a la fecha de la sesión.
+
+firma:
+  - "Ps. Enrique Campillay Pizarro"
+  - "Psicoterapia Esp. Adultos y Familias"
+  - "Esp. Terapia con Adolescentes y Familias"
+  - "Esp. Terapia de Parejas"
+  - "Instituto Chileno de Terapia Familiar"
+  - "Psicólogo Clínico Acreditado — Reg. 2224"
+  - "Comisión Nacional de Acreditación de Psicólogos Clínicos"
+
+# ============================================================
+# Grilla semanal de atención
+# modo: "mixto" = presencial + en línea | "linea" = solo en línea
+# ============================================================
+grilla:
+  lun:
+    manana: { modo: mixto, horas: ["09:10", "10:20", "11:30", "12:40"] }
+    tarde:  { modo: linea, horas: ["17:10", "18:20"] }
+  mar:
+    manana: { modo: mixto, horas: ["09:10", "10:20", "11:30", "12:40"] }
+    tarde:  { modo: mixto, horas: ["15:00", "16:10", "17:20"] }
+    tarde_extra: { modo: linea, horas: ["19:00"] }
+  mie:
+    manana: { modo: mixto, horas: ["09:10", "10:20", "11:30", "12:40"] }
+    tarde:  { modo: linea, horas: ["17:10", "18:20"] }
+  jue:
+    manana: { modo: linea, horas: ["09:10", "10:20", "11:30", "12:40"] }
+    tarde:  { modo: linea, horas: ["15:00", "16:10", "17:10", "18:20"] }
+  vie:
+    manana: { modo: mixto, horas: ["09:10", "10:20", "11:30", "12:40"] }
+    tarde:  { modo: linea, horas: ["17:10", "18:20"] }
+  # Sábado: excepcional. Se abre creando eventos en el calendario
+  # "Aperturas" (ver calendario_aperturas más arriba).
