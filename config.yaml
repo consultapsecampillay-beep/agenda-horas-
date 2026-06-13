@@ -10,18 +10,17 @@ duracion_sesion_min: 60
 # (domingo de la semana siguiente)
 horizonte: semana_actual_mas_siguiente
 
-# Calendarios
-calendario_principal: consulta.ps.ecampillay@gmail.com
-calendario_feriados: es.cl#holiday@group.v.calendar.google.com
-# Calendario secundario OPCIONAL para abrir sábados u horas extra.
-# Crear un calendario nuevo llamado "Aperturas" en Google Calendar,
-# compartirlo con la cuenta de servicio (ver todos los detalles)
-# y pegar aquí su ID. Los eventos creados ahí abren bloques en línea.
-calendario_aperturas: ""
+# Calendarios (vía direcciones iCal)
+# El calendario principal se lee desde la dirección SECRETA iCal,
+# guardada como secreto ICAL_URL en GitHub (nunca en este archivo).
+# Las aperturas (sábados/horas extra) usan el secreto opcional
+# ICAL_APERTURAS_URL.
+# Feriados de Chile: dirección pública, sin autenticación.
+ical_feriados: "https://calendar.google.com/calendar/ical/es.cl%23holiday%40group.v.calendar.google.com/public/basic.ics"
 
 # Número de WhatsApp para el botón de reserva de la página
 # (formato internacional sin +, ej: 56912345678)
-whatsapp_numero: 56964074890
+whatsapp_numero: "56964074890"
 
 centro: "Kadia Centro Atención Familiar, La Serena (K1)"
 titulo_pagina: "Horas disponibles — Ps. Enrique Campillay"
